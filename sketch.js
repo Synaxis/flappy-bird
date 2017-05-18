@@ -3,10 +3,10 @@ var pipes = [];
 var count = 0;
 var flag = true;
 var pipe_flag = true;
-//var w = 600;
-//var h = 600;
-var w = window.screen.width/1.5;
-var h = window.screen.height/1.5;
+var w = 600;
+var h = 600;
+//var w = window.screen.width/1.5;
+//var h = window.screen.height/1.5;
 var cnv;
 
 function centerCanvas(){
