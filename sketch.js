@@ -5,12 +5,8 @@ var flag = true;
 var pipe_flag = true;
 //var w = 600;
 //var h = 600;
-var w = window.screen.width;
-var h = window.screen.height;
-if (window.devicePixelRatio < 1){
-  w = window.screen.width/window.devicePixelRatio;
-  h = window.screen.height/window.devicePixelRatio;
-}
+var w = window.screen.width/1.5;
+var h = window.screen.height/1.5;
 var cnv;
 
 function centerCanvas(){
