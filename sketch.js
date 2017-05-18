@@ -58,6 +58,11 @@ function reset(){
   window.location.reload()
 }
 
+function touchStarted(){
+  bird.up();
+  return false;
+}
+
 function keyPressed(){
   if (key == ' ' && pipe_flag == true){
     bird.up();
