@@ -3,11 +3,19 @@ var pipes = [];
 var count = 0;
 var flag = true;
 var pipe_flag = true;
-var w = window.innerWidth;
-var h = window.innerHeight;
+var w = 500;
+var h = 500;
+var cnv;
+
+function centerCanvas(){
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  cnv.position(x,y);
+}
 
 function setup(){
-  createCanvas(w,h); //700,600
+  cnv = createCanvas(w,h); //700,600
+  centerCanvas();
   bird = new Bird;
   pipes.push(new Pipe());
 }
@@ -50,12 +58,16 @@ function draw(){
 
 function startOver(){
   var button = createButton("Play Again?");
-  button.position(w/2, h/2);
+  button.position(windowWidth/2, windowHeight/2);
   button.mousePressed(reset);
 }
 
 function reset(){
   window.location.reload()
+}
+
+function windowResized(){
+  centerCanvas();
 }
 
 function touchStarted(){
