@@ -5,14 +5,13 @@ var flag = true;
 var pipe_flag = true;
 
 function setup(){
-  createCanvas(500,600);
+  createCanvas(700,600);
   bird = new Bird;
   pipes.push(new Pipe());
 }
 
 function draw(){
   background(176,224,230);
-  //resetSketch();
   bird.update();
   bird.show();
   fill(0);
@@ -35,7 +34,6 @@ function draw(){
     }
 
     if (pipes[i].hits(bird)){
-      //console.log("HIT");
       str = "Streak: " + count;
       startOver();
       pipe_flag = false;
@@ -59,7 +57,12 @@ function reset(){
 }
 
 function touchStarted(){
-  bird.up();
+  if (pipe_flag == true){
+    bird.up();
+  }
+  if (pipe_flag == false){
+    reset();
+  }
   return false;
 }
 
