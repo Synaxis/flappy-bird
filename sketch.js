@@ -3,9 +3,11 @@ var pipes = [];
 var count = 0;
 var flag = true;
 var pipe_flag = true;
+var w = window.innerWidth;
+var h = window.innerHeight;
 
 function setup(){
-  createCanvas(700,600);
+  createCanvas(w,h); //700,600
   bird = new Bird;
   pipes.push(new Pipe());
 }
@@ -17,7 +19,7 @@ function draw(){
   fill(0);
   textSize(32);
   str = "Streak: " + count;
-  text(str, width/3, height/5);
+  text(str, w/3, h/5);
 
   if (frameCount % 150 == 0){
     pipes.push(new Pipe());
@@ -48,7 +50,7 @@ function draw(){
 
 function startOver(){
   var button = createButton("Play Again?");
-  button.position(width/2, height/2);
+  button.position(w/2, h/2);
   button.mousePressed(reset);
 }
 
