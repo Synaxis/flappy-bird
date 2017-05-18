@@ -3,8 +3,8 @@ var pipes = [];
 var count = 0;
 var flag = true;
 var pipe_flag = true;
-var w = 500;
-var h = 500;
+var w = 600;
+var h = 600;
 var cnv;
 
 function centerCanvas(){
@@ -14,7 +14,7 @@ function centerCanvas(){
 }
 
 function setup(){
-  cnv = createCanvas(w,h); //700,600
+  cnv = createCanvas(windowWidth,windowHeight); //700,600
   centerCanvas();
   bird = new Bird;
   pipes.push(new Pipe());
