@@ -3,8 +3,14 @@ var pipes = [];
 var count = 0;
 var flag = true;
 var pipe_flag = true;
-var w = 600;
-var h = 600;
+//var w = 600;
+//var h = 600;
+var w = window.screen.width;
+var h = window.screen.height;
+if (window.devicePixelRatio < 1){
+  w = window.screen.width/window.devicePixelRatio;
+  h = window.screen.height/window.devicePixelRatio;
+}
 var cnv;
 
 function centerCanvas(){
@@ -14,7 +20,8 @@ function centerCanvas(){
 }
 
 function setup(){
-  cnv = createCanvas(windowWidth,windowHeight); //700,600
+  //cnv = createCanvas(windowWidth,windowHeight); //700,600
+  cnv = createCanvas(w,h);
   centerCanvas();
   bird = new Bird;
   pipes.push(new Pipe());
