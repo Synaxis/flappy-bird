@@ -2,7 +2,7 @@ function Pipe(){
   this.top = random((height-1)/2);
   this.bottom = random((height-1)/2);
   this.x = width;
-  this.w = 20;
+  this.w = 50;
   this.speed = 2;
 
   this.highlight = false;
@@ -19,7 +19,7 @@ function Pipe(){
   }
 
   this.show = function(){
-    fill(255)
+    fill(34,139,34);
     if (this.highlight){
       fill(255,0,0);
     }
