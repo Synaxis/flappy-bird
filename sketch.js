@@ -40,7 +40,7 @@ function draw(){
     if (pipe_flag == true){
       pipes[i].update();
     }
-    if (flag == true && pipes[i].x < (-width + 200)){
+    if (flag == true && pipes[i].x < 0/*(width/15)*/){ //negative?
       flag = false;
       count += 1;
       str = "Streak: " + count;
@@ -52,7 +52,7 @@ function draw(){
       pipe_flag = false;
     }
 
-    if (pipes[i].x < -width){  //goes off screen
+    if (pipes[i].x < -width/3){  //-width...goes off screen
       pipes.splice(i,1); //deletes element from array
       flag = true;
     }
