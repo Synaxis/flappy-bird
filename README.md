@@ -14,4 +14,4 @@ Background music is from [www.bensound.com](http://www.bensound.com/royalty-free
 ## To Fix/Update
 * Counting method (Streak)
 * Increase difficulty as streak increases
-* Increase sensitivity of crashes
+* Improve the spacing of the pipes
